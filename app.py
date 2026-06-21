@@ -164,7 +164,7 @@ st.markdown("""
     <h1>💪 FitSupport</h1>
     <p>Personalised Nutrition & Supplement Guidance System</p>
     <p style="color:#4ecdc4; font-size:0.85rem;">
-        For educational purposes only · Not medical advice · UAE Market Edition
+        For educational purposes only · Please note that this system DOES NOT offer PROFESSIONAL medical advice · UAE Market Edition
     </p>
 </div>
 """, unsafe_allow_html=True)
