@@ -1,0 +1,18 @@
+# Files to NOT upload to GitHub
+
+# Secrets file — contains your email password
+.streamlit/secrets.toml
+
+# Database file — contains user session data
+data/fitsupport.db
+
+# Python cache files — not needed
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
