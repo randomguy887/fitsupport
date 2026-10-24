@@ -294,7 +294,7 @@ st.markdown("""
 <div class="main-header">
     <h1>💪 FitSupport</h1>
     <p class="subtitle">Personalised Nutrition & Supplement Guidance System</p>
-    <p class="subtitle">For educational purposes only  · Please note that this system DOES NOT offer PROFESSIONAL medical advice</p>
+    <p class="subtitle">For educational purposes only  · Please note that this system DOES NOT AT ALL offer PROFESSIONAL medical advice</p>
     <p class="tagline">✨ Powered by peer-reviewed science &nbsp;·&nbsp; 🇦🇪 UAE Market Edition &nbsp;·&nbsp; 🤖 AI-Enhanced</p>
 """, unsafe_allow_html=True)
 
@@ -753,6 +753,6 @@ else:
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
     <div style="text-align:center; color:rgba(255,255,255,0.2); font-size:0.8rem; padding-top:1rem; border-top: 1px solid rgba(255,255,255,0.05);">
-        FitSupport · LJMU BSc Computer Science Final Year Project · Educational purposes only · Not medical advice
+        FitSupport · LJMU BSc Computer Science Final Year Project · Educational purposes only · PLEASE NOTE THAT THIS IS NOT MEDICAL ADVICE
     </div>
     """, unsafe_allow_html=True)

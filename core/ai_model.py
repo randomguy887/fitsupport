@@ -6,22 +6,21 @@ This file contains the AI/Machine Learning component of FitSupport.
 Model Used: Decision Tree Classifier
 Library   : scikit-learn
 
-Why a Decision Tree?
-- It is the most explainable ML model — you can trace every decision
-- It works like a flowchart: "If BMI > 25 AND age > 30 THEN..."
-- No black box — every prediction can be explained in plain English
-- Perfect for a health guidance system where transparency matters
+Why have i used/ implemented a Decision Tree over?
+- because it is the most explainable ML model — you can trace every decision
+- because it works like a flowchart: "If BMI > 25 AND age > 30 THEN..."
+- because there are no black boxes — so every prediction can be explained in plain English
+- because it is perfect for a health guidance system where transparency and honesty matters alot
 
 What does it do?
-- Takes a user's age, weight, height, activity level, and BMI
-- Predicts which "fitness profile cluster" the user belongs to
-- Gives personalised AI-generated advice based on that cluster
-- Also shows a confidence score for the prediction
+- it will take the user's age, weight, height, activity level, and BMI
+-  it will predict which "fitness profile cluster" the user belongs to
+-  it will give personalised AI-generated advice based on that cluster
+-  it will also show a confidence score for the prediction
 
 Training Data:
-- The model is trained on synthetic (made-up but realistic) user data
-- This is acceptable for academic projects as real user data
-  would require ethical approval and data collection
+- The model is trained on synthetic (very made up but realistic) user data
+- This is acceptable for academic projects as real user data would require ethical approval and data collection
 - The patterns in the data reflect real nutritional science guidelines
 
 Reference:
@@ -33,8 +32,10 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from dataclasses import dataclass
 
+from core.supplement_engine import SupplementReport
 
-# ── Step 1: Define what the AI result looks like ─────────────
+
+#  Step 1: this step will basically define what the AI result looks like 
 
 @dataclass
 class AIResult:
@@ -45,7 +46,7 @@ class AIResult:
     model_explanation:  str    # Plain English explanation of the prediction
 
 
-# ── Step 2: Define the fitness profile categories ─────────────
+#  Step 2: this step will basically define the fitness profile categories
 
 FITNESS_PROFILES = {
     0: "Beginner — Building Foundation",
@@ -90,7 +91,7 @@ PROFILE_ADVICE = {
 }
 
 
-# ── Step 3: Generate synthetic training data ──────────────────
+#  Step 3: Generating synthetic training data 
 
 def generate_training_data():
     """
@@ -134,7 +135,7 @@ def generate_training_data():
     return X, y
 
 
-# ── Step 4: Train the Decision Tree ──────────────────────────
+#  Step 4: Training the Decision Tree 
 
 def train_model():
     """
@@ -151,7 +152,7 @@ def train_model():
     return model
 
 
-# ── Step 5: Lookup tables ─────────────────────────────────────
+#  Step 5: Looking up tables 
 
 ACTIVITY_TO_NUM = {
     "sedentary": 0, "light": 1, "moderate": 2,
@@ -165,7 +166,7 @@ GOAL_TO_NUM = {
 FEATURE_NAMES = ["Age", "BMI", "Activity Level", "Fitness Goal", "Weight (kg)"]
 
 
-# ── Step 6: Main prediction function ─────────────────────────
+#  Step 6: this is the main prediction function 
 
 def run_ai_model(age, bmi, activity_level, fitness_goal, weight_kg):
     """
@@ -220,3 +221,6 @@ def run_ai_model(age, bmi, activity_level, fitness_goal, weight_kg):
         feature_importance = feature_importance,
         model_explanation  = explanation,
     )
+
+
+
